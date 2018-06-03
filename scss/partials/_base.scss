@@ -1,3 +1,74 @@
+$container-width: 1200px;
+$image-width: ($container-width / 4) - 20;
+
+
 html {
-    background: black;
-}
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: $ff-sans-serif;
+    background:
+      linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+      linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+      linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+      linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+  }
+
+  .container {
+      width: $container-width;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: $container-color;
+
+      //SEARCH BAR
+      & .search-images {
+        width: 100%;
+        display: flex;
+
+        & input {
+            width: 100%;
+            height: 100%;
+            padding: 12px 20px;
+            background: $secondary-color;
+            border: 0;
+            color: $white;
+            font-weight: $fw-bold;
+            letter-spacing: 2px;
+
+            &::placeholder {
+                color: $white;
+                font-weight: $fw-bold;
+                letter-spacing: 2px;
+                opacity: .7;
+            }
+        }
+
+        & button {
+            background: $primary-color;
+            border: 1px solid $primary-color;
+            padding: 0 1rem;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+      }
+
+      //IMAGE DISPLAY
+      & .image-gallery {
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+
+        & .image-img {
+            width: $image-width;
+            height: $image-width;
+            justify-self: center;
+            align-self: center;
+            background: yellow;
+        }
+      }
+   }
