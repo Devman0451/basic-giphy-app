@@ -1,6 +1,6 @@
 
 (() => {
-    const API_KEY = /* INSERT API KEY  */;
+    //const API_KEY = /* INSERT API KEY  */;
     let searchText = "";
     let limit = 8;
 
