@@ -4,3 +4,9 @@ $ff-sans-serif: 'Roboto Condensed', sans-serif;
 
 $fw-normal: 400;
 $fw-bold: 800;
+
+@mixin text-format {
+    color: $white;
+    font-weight: $fw-bold;
+    letter-spacing: 2px;
+}
